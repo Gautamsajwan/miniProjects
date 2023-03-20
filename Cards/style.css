@@ -1,0 +1,122 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #17141d;
+    color:white;
+}
+
+/*---------------title section------------------*/
+
+#title {
+    margin: 20px 30px;
+    padding: 7px 10px;
+    font-family: 'DM Mono', monospace;
+    color:white;
+    display: grid;
+    grid-template-columns: 1fr;
+    outline: 3px dashed rgb(50, 231, 255);
+    grid-template-rows: auto;
+    text-shadow: -0.5rem 0.5rem 3px black;
+}
+
+#title h1 {
+    grid-column: span 1 / auto;
+    font-size: 7rem;
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+    font-family: 'Unica One', cursive;
+}
+
+#title h3 {
+    grid-column: span 1 / auto;
+}
+
+
+/*---------------cards section -----------------*/
+
+#card-container{
+    font-family: 'DM Mono', monospace;
+    margin: 10px;
+    display: flex;
+    padding: 3rem;
+}
+
+#card{
+    position: relative;
+    height: 350px;
+    width: 300px;
+    min-width: 250px; /* min-width restricts the width of the card to go below 250px in case of so many cards and adds a scroll bar for the overflowed content i.e. cards in this case. */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem black;
+    transition: 0.3s;
+}
+
+#card:not(:first-child){
+    margin-left: -125px;
+}
+
+#card:hover{
+    transform: translateY(-1.5rem);
+}
+
+#card:hover~#card { /* (~ selector) selects all the siblings of the specified element which succeed it */
+    transform: translateX(125px);
+}
+
+.card-header h2{
+    transition: 0.2s;
+}
+
+.card-header h2:hover{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+
+/* --------------for smartphones--------------*/
+
+@media screen and (max-width: 600px){
+
+    #card:hover~#card{
+        transform:translateX(200px);
+    }
+
+    #card:not(:first-child){
+        margin-left: -200px;
+    }
+}
+
+
+.details{
+    display:grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto;
+    position: absolute;
+    bottom: 5rem;
+    text-transform: capitalize;
+}
+
+.details img{
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    margin-left: 0;
+}
+
+.doodle h3{
+    color: rgb(150, 150, 150);
+}

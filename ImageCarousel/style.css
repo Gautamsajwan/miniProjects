@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6 rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    font-size: 1rem;
+    padding: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.fa-solid {
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+}
+
+.fa-solid:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.right-btn {
+    right: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active] {
+    opacity: 100%;
+    transition-delay: 0ms;
+}
+
+.slide >img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

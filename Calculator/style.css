@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --font: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #00d2ff, #928dab);
+    font-family: var(--font);
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    max-width: 400px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, .6);
+    box-shadow: 10px 10px 15px rgba(70, 70, 70, 0.5);
+    border-radius: 1.2rem;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.display {
+    background-color: rgba(0, 0, 0, .75);
+    min-height: 12rem;
+    border-radius: 1rem;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.input {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.output {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.keys button {
+    color: rgb(44, 44, 44);
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 3px 3px 5px rgba(70, 70, 70, 0.5);
+    font-size: 2rem;
+    border-radius: 1rem;
+    font-family: var(--font);
+    font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    grid-column: span 1;
+    transition: 0.2s;
+}
+
+.keys .span2 {
+    grid-column: span 2;
+}
+
+.keys .num:hover {
+    background-color: rgb(76, 188, 253);
+    color: white;
+}
+
+.keys .operator:hover {
+    background-color: rgb(187, 68, 255);
+    color: white;
+}
+
+.keys .orange:hover {
+    background-color: rgb(250, 120, 45);
+    color: white;
+}
+
+.keys .red:hover {
+    background-color: rgb(248, 50, 50);
+    color: white;
+}
+
+.keys .green:hover {
+    background-color: rgb(0, 194, 0);
+    color: white;
+}

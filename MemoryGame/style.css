@@ -1,0 +1,52 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.card.flipped {
+    background-color: #2196F3;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.game-restart {
+    font-size: 1.5em;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+}
+
+.moves, .timer {
+    font-size: 1.5em;
+}

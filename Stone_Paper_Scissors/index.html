@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Choice game</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <h1>Rock-Paper-Scissors</h1>
+
+            <div class="scoreCard">
+                <div class="playerDiv data">
+                    <h3>you</h3>
+                    <h1 class="pScore">0</h1>
+                </div>
+                <div class="resultDiv data">
+                    <h3>results</h3>
+                    <h1 class="result">--</h1>
+                </div>
+                <div class="computerDiv data">
+                    <h3>computer</h3>
+                    <h1 class="cScore">0</h1>
+                </div>
+            </div>
+
+            <div class="cardContainer">
+                <div class="card" data-name="rock">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3562/3562093.png" alt="rock" name="rock">
+                </div>
+                <div class="card" data-name="paper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2165/2165693.png" alt="rock" name="paper">
+                </div>
+                <div class="card" data-name="scissors">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5703/5703205.png" alt="rock" name="scissors">
+                </div>
+            </div>
+
+            <button class="reset">Reset</button>
+        </div>
+    </body>
+</html>
